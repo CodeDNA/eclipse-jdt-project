@@ -2,14 +2,17 @@ package edu.bu.met.cs665;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
-import org.eclipse.jdt.core;  // ** Not importing **
+import java.nio.file.Path;
+import java.nio.file.Paths;
+//import org.eclipse.jdt.core;  // ** Not importing **
 
 
 public class Main {
 
-
   public static void main(String[] args) {
-    String codeFragment = readFromFile("/media/jarvis/DATA/BOSTON UNIVERSITY/BU RESEARCH ASSISTANT/Projects/professorkiaT/Maven Template/JavaProjectTemplate/src/TestFiles/Test.java");
+    Path relativePath = Paths.get("");
+    String testFilePath = relativePath.toAbsolutePath().toString() + "/src/TestFiles/Test.java";
+    String codeFragment = readFromFile(testFilePath);
     System.out.println(codeFragment);
   }
 
@@ -39,6 +42,11 @@ public class Main {
 
 
 //? *********** V A R I A B L E   P R I N T E R   C L A S S ***********
+
+
+/*
+
+
 class VariablePrinter {
   // ! ERROR IN THIS METHOD || Import error **********************************
    public static ASTNode getASTNode(String codeFragment) {
@@ -72,4 +80,7 @@ class VariablePrinter {
       ;
     });
   }
-} // * Variable Printer Class
+} //  Variable Printer Class
+
+
+ */
