@@ -4,14 +4,22 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.nio.file.Path;
 import java.nio.file.Paths;
-import org.eclipse.jdt.core.*;  // ** Not importing **
+
+import org.eclipse.jdt.core.dom.AST;
+import org.eclipse.jdt.core.dom.ASTNode;
+import org.eclipse.jdt.core.dom.ASTParser;
+import org.eclipse.jdt.core.dom.ASTVisitor;
+import org.eclipse.jdt.core.dom.CompilationUnit;
+import org.eclipse.jdt.core.dom.VariableDeclarationFragment;
 
 
 public class Main {
 
   public static void main(String[] args) {
     Path relativePath = Paths.get("");
+    
     String testFilePath = relativePath.toAbsolutePath().toString() + "/src/TestFiles/Test.java";
+    
     String codeFragment = readFromFile(testFilePath);
     System.out.println(codeFragment);
   }
@@ -41,16 +49,11 @@ public class Main {
 
 
 
-//? *********** V A R I A B L E   P R I N T E R   C L A S S ***********
-
-
-/*
-
-
 class VariablePrinter {
   // ! ERROR IN THIS METHOD || Import error **********************************
    public static ASTNode getASTNode(String codeFragment) {
-    ASTParser parser = ASTParser.newParser(AST.JLS8);
+  
+	ASTParser parser = ASTParser.newParser(AST.JLS8);
     parser.setKind(ASTParser.K_COMPILATION_UNIT);
     parser.setSource(codeFragment.toCharArray());
     parser.setResolveBindings(false);
@@ -83,4 +86,4 @@ class VariablePrinter {
 } //  Variable Printer Class
 
 
- */
+ 
