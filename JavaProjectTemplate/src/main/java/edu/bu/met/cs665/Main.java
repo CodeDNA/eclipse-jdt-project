@@ -57,7 +57,11 @@ class VariablePrinter {
 
   }
 
+//asd
 
+    public static void test() {
+
+    }
   public static void printVariables(String codeFragment) {
     ASTNode node = getASTNode(codeFragment);
     node.accept(new ASTVisitor() {
