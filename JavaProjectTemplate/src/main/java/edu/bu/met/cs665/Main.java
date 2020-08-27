@@ -4,7 +4,6 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.nio.file.Path;
 import java.nio.file.Paths;
-//import org.eclipse.jdt.core;  // ** Not importing **
 
 
 public class Main {
@@ -44,43 +43,4 @@ public class Main {
 //? *********** V A R I A B L E   P R I N T E R   C L A S S ***********
 
 
-/*
 
-
-class VariablePrinter {
-  // ! ERROR IN THIS METHOD || Import error **********************************
-   public static ASTNode getASTNode(String codeFragment) {
-    ASTParser parser = ASTParser.newParser(AST.JLS8);
-    parser.setKind(ASTParser.K_COMPILATION_UNIT);
-    parser.setSource(codeFragment.toCharArray());
-    parser.setResolveBindings(false);
-
-    ASTNode node = null;
-    try {
-      node = (CompilationUnit) parser.createAST(null);
-    } catch (Exception e) {
-      return null;
-    }
-    return node;
-
-  }
-
-  public static void printVariables(String codeFragment) {
-    ASTNode node = getASTNode(codeFragment);
-    node.accept(new ASTVisitor() {
-
-      int varCount = 0;
-
-      @Override
-      public boolean visit(VariableDeclarationFragment node) {
-        System.out.println(node.getName().toString());
-        return super.visit(node);
-      }
-
-      ;
-    });
-  }
-} //  Variable Printer Class
-
-
- */
