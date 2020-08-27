@@ -2,7 +2,7 @@ package edu.bu.met.cs665;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
-import org.eclipse.jdt.core;
+import org.eclipse.jdt.core;  // ** Not importing **
 
 
 public class Main {
@@ -57,11 +57,6 @@ class VariablePrinter {
 
   }
 
-//asd
-
-    public static void test() {
-
-    }
   public static void printVariables(String codeFragment) {
     ASTNode node = getASTNode(codeFragment);
     node.accept(new ASTVisitor() {
