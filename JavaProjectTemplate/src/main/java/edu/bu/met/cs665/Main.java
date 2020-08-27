@@ -84,6 +84,3 @@ class VariablePrinter {
     });
   }
 } //  Variable Printer Class
-
-
- 
